@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './About.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import profileImg from '../../assets/about_profile.jpg'
+import skillData from '../../assets/skills_data';
+import arrowIcon from '../../assets/arrow_icon.svg';
+
 export const About = () => {
+    const [showMore, setShowMore] = useState(false);
+    const displayedSkills = showMore ? skillData : skillData.slice(0, 5);
     return (
         <div className='about'>
             <div className="about-title">
@@ -23,144 +28,25 @@ export const About = () => {
                     </div>
 
                     <div className="about-skills">
-                        <div className="about-skill">
-                            <p>JavaScript</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-
-                        <div className="about-skill">
-                            <p>Node JS</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-
-                        <div className="about-skill">
-                            <p>React JS</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Vite</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Express JS</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>MERN Stack</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Fullstack Development</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Nest JS</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Next JS</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Rest API</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>GraphQL API</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>CI / CD DevOps </p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Amazon Web Services</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Laravel | PHP</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>JSON</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Typescript</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Suitescript</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Oracle</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Netsuite</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>ERP Development</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Technical Consultancy</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Problem Solving</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>SQL</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>NO SQL</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>MongoDB</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>MySql</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Websockets</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>Redis</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-                        <div className="about-skill">
-                            <p>OAuth | JWT | SSO </p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-
-                        <div className="about-skill">
-                            <p>Sanity</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-
-                        <div className="about-skill">
-                            <p>Serverless</p>
-                            <hr style={{ width: "100%" }} />
-                        </div>
-
-
-
-
-
-
-
-
-
+                        {displayedSkills.map((skill, index) => {
+                            return <div className="about-skill" key={index}>
+                                <p>{skill.name}</p>
+                                <hr style={{ width: skill.percentage }} />
+                            </div>
+                        })}
                     </div>
+                    {!showMore && skillData.length > 5 && (
+                        <div className="about-skill-showmore" onClick={() => setShowMore(true)}>
+                            <p>Show More</p>
+
+                        </div>
+                    )}
+                    {showMore && (
+                        <div className="about-skill-showless" onClick={() => setShowMore(false)}>
+                            <p>Show Less</p>
+
+                        </div>
+                    )}
 
 
 
