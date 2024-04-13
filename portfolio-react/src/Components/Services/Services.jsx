@@ -6,7 +6,7 @@ import arrowIcon from '../../assets/arrow_icon.svg';
 import servicesData from '../../assets/services_data';
 export const Services = () => {
     return (
-        <div className="services">
+        <div className="services" id="services">
             <div className="services-title">
                 <h1>My Services</h1>
                 <img src={theme_pattern} alt="" />

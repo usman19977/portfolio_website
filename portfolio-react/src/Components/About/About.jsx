@@ -9,7 +9,7 @@ export const About = () => {
     const [showMore, setShowMore] = useState(false);
     const displayedSkills = showMore ? skillData : skillData.slice(0, 5);
     return (
-        <div className='about'>
+        <div className='about' id="about">
             <div className="about-title">
                 <h1>About me</h1>
                 <img src={theme_pattern} alt='' />
