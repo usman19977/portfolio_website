@@ -93,7 +93,7 @@
 }
 
 .contact-right textarea {
-    width: 650px;
+    width: 670px;
     border: none;
     padding: 25px;
     border-radius: 4px;
@@ -120,7 +120,7 @@
     transition: 0.3s;
 }
 
-@media(max-width:768px) {
+@media(max-width:1024px) {
     .contact {
         gap: 50px;
         margin: 50px 70px;
@@ -129,13 +129,15 @@
 
     .contact-title h1 {
         padding: 0px;
-        font-size: 50px;
-        font-weight: 600;
+        font-size: 30px;
+        font-weight: 700;
     }
 
     .contact-title img {
         width: 130px;
         margin-right: -20px;
+
+
     }
 
     .contact-section {
@@ -166,12 +168,12 @@
     }
 
     .contact-right input {
-        width: 100%;
+        width: auto;
         font-size: 20px;
     }
 
     .contact-right textarea {
-        width: 90%;
+        width: auto;
         font-size: 20px;
     }
 

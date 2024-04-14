@@ -51,7 +51,7 @@
     display: none;
 }
 
-@media(max-width:768px) {
+@media(max-width:1205px) {
     .navbar {
         margin: 20px 50px;
     }
@@ -93,5 +93,11 @@
         padding-left: 100px;
         flex-direction: row;
         gap: 20px;
+    }
+}
+
+@media(max-width : 1367px) {
+    .nav-connect {
+        display: none;
     }
 }

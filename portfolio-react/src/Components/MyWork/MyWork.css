@@ -66,16 +66,16 @@
 
 }
 
-@media(max-width:768px) {
+@media(max-width:1024px) {
     .mywork {
-        gap: 50px;
+        gap: 70px;
         margin: 50px 70px;
         align-items: start;
     }
 
     .mywork-title h1 {
         padding: 0;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 50px;
     }
 
@@ -85,7 +85,7 @@
     }
 
     .mywork-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
 
@@ -99,5 +99,25 @@
         font-size: 18px;
         margin: 50px auto;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 700px) {
+    .mywork {
+        gap: 70px;
+        margin: 20px 20px;
+        align-items: center;
+    }
+
+    .mywork-title h1 {
+        padding: 0;
+        font-weight: 700;
+        font-size: 40px;
+
+    }
+
+    .mywork-container {
+        grid-template-columns: 1fr;
+
     }
 }

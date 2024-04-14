@@ -68,6 +68,7 @@ export const About = () => {
                     <h1>50+</h1>
                     <p>HAPPY CLIENTS</p>
                 </div>
+
             </div>
         </div>
 

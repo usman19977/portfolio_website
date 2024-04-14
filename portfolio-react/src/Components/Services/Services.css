@@ -79,7 +79,7 @@
     transition: 0.4s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .services {
         align-items: start;
         gap: 70px;
@@ -117,7 +117,25 @@
     }
 
     .services-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .services {
+        align-items: center;
+        gap: 70px;
+        margin: 20px 20px;
+    }
+
+    .services-title h1 {
+        padding: 0;
+        font-size: 40px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+
     }
 }

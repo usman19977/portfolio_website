@@ -21,7 +21,7 @@ export default function Navbar() {
     }
     return (
         <div className='navbar'>
-            <img src={logo} alt="" width={150} height={80} />
+            <img src={logo} alt="" width={150} height={80} className='nav-logo' />
             <img src={toggleIcon} alt="" onClick={openMenu} className="nav-mob-open" />
 
             <ul ref={menuRef} className="nav-menu">

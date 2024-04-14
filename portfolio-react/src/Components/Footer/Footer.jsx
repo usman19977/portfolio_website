@@ -11,13 +11,13 @@ export const Footer = () => {
                     <img src={footerLogo} alt="" width={110} height={60} />
                     <p>I am a fullstack software engineer from Pakistan with 7+ years of experience worked with multiple national and multi national firms.</p>
                 </div>
-                <div className="footer-top-right">
+                {/* <div className="footer-top-right">
                     <div className="footer-email-input">
                         <img src={userIcon} alt="" />
                         <input type="email" placeholder='Enter your email' />
                     </div>
                     <div className="footer-subscribe">Subscribe</div>
-                </div>
+                </div> */}
             </div>
             <hr />
             <div className="footer-bottom">
