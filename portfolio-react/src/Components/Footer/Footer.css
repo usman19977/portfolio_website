@@ -72,6 +72,7 @@
 
 @media(max-width:768px) {
     .footer {
+        display: flex;
         margin: 50px 70px;
 
     }
@@ -81,9 +82,12 @@
         gap: 50px;
     }
 
+
     .footer-bottom {
         display: flex;
         flex-direction: column-reverse;
         margin-bottom: 50px;
     }
+
+
 }

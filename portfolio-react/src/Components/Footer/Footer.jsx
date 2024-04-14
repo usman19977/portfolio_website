@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css';
-import footerLogo from '../../assets/footer_logo.svg';
+import footerLogo from '../../assets/logo.png';
 import userIcon from '../../assets/user_icon.svg';
 
 export const Footer = () => {
@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className='footer'>
             <div className="footer-top">
                 <div className="footer-top-left">
-                    <img src={footerLogo} alt="" />
+                    <img src={footerLogo} alt="" width={110} height={60} />
                     <p>I am a fullstack software engineer from Pakistan with 7+ years of experience worked with multiple national and multi national firms.</p>
                 </div>
                 <div className="footer-top-right">

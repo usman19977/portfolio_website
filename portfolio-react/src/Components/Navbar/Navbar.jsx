@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import './Navbar.css';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 import underLineImg from '../../assets/nav_underline.svg';
 import toggleIcon from '../../assets/menu_open.svg';
 import toggleClose from '../../assets/menu_close.svg';
@@ -21,7 +21,7 @@ export default function Navbar() {
     }
     return (
         <div className='navbar'>
-            <img src={logo} alt="" />
+            <img src={logo} alt="" width={150} height={80} />
             <img src={toggleIcon} alt="" onClick={openMenu} className="nav-mob-open" />
 
             <ul ref={menuRef} className="nav-menu">
