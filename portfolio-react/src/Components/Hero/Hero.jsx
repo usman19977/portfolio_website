@@ -11,7 +11,7 @@ export const Hero = () => {
             <p>A seasoned fullstack engineer with over 7+ years of experience, I excel as a leader, mentor, and technology enthusiast. I am eager to collaborate on innovative ideas and projects. My track record demonstrates a history of success in the information technology and services industry.</p>
             <div className="hero-action">
                 <div className="hero-connect"> <AnchorLink className="anchor-link" offset={50} href='#contact'>Connect With me </AnchorLink></div>
-                <div className="hero-resume">My Resume</div>
+                <div className="hero-resume" onClick={() => window.open("https://usmanbashir.co/assets/Usman_Bashir_Resume.pdf", "_blank")} >My Resume</div>
             </div>
         </div>
     )

@@ -17,7 +17,7 @@ export const MyWork = () => {
                 })}
             </div>
 
-            <div className="mywork-showmore">
+            <div className="mywork-showmore" onClick={() => window.open("https://usmanbashir.co/assets/ProjectDetails.docx", "_blank")}>
                 <p>Show More</p>
                 <img src={arrowIcon} alt="" />
             </div>
